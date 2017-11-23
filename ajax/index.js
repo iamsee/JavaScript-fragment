@@ -1,5 +1,9 @@
 /*
-*   手写ajax
+*   @ 一、手写ajax方法
+*   @ 二、用promise的方式实现ajax
+*/
+/*
+*   一、手写ajax方法
 */
 
 //封装ajax方法
@@ -33,7 +37,7 @@ ajax( 'GET', './data.json', null, function(res) {
 
 
 /*
-*   用promise的方式实现ajax
+*   二、用promise的方式实现ajax
 */
 
 //封装ajax方法
