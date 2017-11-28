@@ -1,5 +1,5 @@
 /*
-*   @ 快速排序封装    
+*   @ 快速排序    
 */
 
 function quickSort( arr ) {
