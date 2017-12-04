@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>深浅拷贝</title>
+</head>
+<body>
+
+    <script src="./index.js"></script>
+    <script>
+        // 应用
+        var newObj = [],
+            obj = [
+            {
+                "a": 1
+            },{
+                "b": 2
+            }
+        ];
+        //默认是浅拷贝
+        newObj = copy( obj );
+        newObj[0].a = '123';
+        console.log(obj[0].a);  // 123
+
+        //进行深拷贝
+        newObj = copy( true, obj );
+        newObj[0].a = '123';
+        console.log(obj[0].a);  // 1
+    </script>
+</body>
+</html>
