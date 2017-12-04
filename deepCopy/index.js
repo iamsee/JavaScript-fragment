@@ -5,14 +5,18 @@
 */
 
 function copy() {
+
     var newObj,
         length = arguments.length,
         isDeep = length > 1 ? arguments[0] : false,
         obj = length > 1 ? arguments[1] : arguments[0];
+
     // 只拷贝对象
     if (typeof obj !== 'object') return;
+
     // 根据obj的类型判断是新建一个数组还是对象
     newObj = obj instanceof Array ? [] : {};
+    
     // 遍历obj，并且判断是obj的属性才拷贝
     for (var key in obj) {
         if (obj.hasOwnProperty(key)) {
@@ -24,5 +28,6 @@ function copy() {
             }
         }
     }
+
     return newObj;
 }
