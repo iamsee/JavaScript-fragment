@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>防抖</title>
+    <style>
+        .container {
+            width: 100%;
+            height: 300px;
+            background: #dddddd;
+            display: flex;
+            align-items: center
+        }
+        h1 {
+            width: 100%;
+            text-align: center;
+            cursor: pointer
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="container">
+       <h1 id="text">0</h1> 
+    </div>
+
+    <script src="./index.js"></script>
+    <script>
+        // 应用
+        var container = document.getElementById('container');
+        var h1 = document.getElementById('text');
+        var conter = 0;
+
+        container.addEventListener( 'mousemove', antiShake( event, 500 ) );
+        function event() {
+            h1.innerHTML = ++ conter;
+        }
+    </script>
+</body>
+</html>
