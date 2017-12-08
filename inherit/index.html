@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>混合继承</title>
+</head>
+<body>
+
+    <script src="./index.js"></script>
+    <script>
+        // 应用
+        function Parent() {
+            this.name = 'ck'
+        }
+        Parent.prototype.output = function() {
+            alert( this.name )
+        }
+        function Child() {
+            Parent.call( this )
+        }
+
+        //使用封装的继承方法
+        extend( Child, Parent );
+        var child = new Child();
+        //调用output方法测试是否继承成功
+        child.output(); //  ck
+        //检验实例化对象child是否在Parent对象的原型链上
+        console.log( child instanceof Parent ) //   true
+    </script>
+</body>
+</html>
