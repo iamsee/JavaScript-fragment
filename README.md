@@ -19,9 +19,3 @@
     - quicksort => 快速排序;   
 
     - currying => 柯里化;
-
-    - partial => 偏函数;
-
-    - lazy-func => 惰性函数;
-    
-    - bind => js的bind实现;
